@@ -1,0 +1,8 @@
+# Python / Streamlit project ignores
+.venv/
+__pycache__/
+.DS_Store
+.model_cache/
+
+# Model file kept out of git; use MODEL_URL
+best_model.h5
