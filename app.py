@@ -54,7 +54,9 @@ st.markdown(
 
 # --- Utilities ---
 def _local_model_path() -> str:
-    return os.path.join(os.getcwd(), "best_model.h5")
+    # Resolve relative to this file's directory to avoid CWD issues
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_dir, "best_model.h5")
 
 
 def _maybe_download_model() -> str | None:
